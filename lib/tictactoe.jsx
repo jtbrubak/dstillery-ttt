@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './style.css';
 
 class Board extends React.Component {
   constructor() {
+    super();
     this.state = { currentTurn: "X", turnNumber: 1,
       rows: [["", "", ""], ["", "", ""], ["", "", ""]] };
 
@@ -24,5 +26,6 @@ class Board extends React.Component {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  ReactDOM.render(<Board/>, body);
+  const root = document.getElementById('root');
+  ReactDOM.render(<Board/>, root);
 });
