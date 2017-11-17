@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class Board extends React.Component {
   constructor() {
@@ -22,4 +23,6 @@ class Board extends React.Component {
   }
 }
 
-module.exports = Board;
+document.addEventListener("DOMContentLoaded", function() {
+  ReactDOM.render(<Board/>, body);
+});
